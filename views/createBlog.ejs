@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title %> | Page</title>
+</head> -->
+<%- include('./partials/head.ejs') %> 
+<body>
+    <!-- <nav>
+        <ul>
+            <li> <a href="/">Home Page</a></li>
+            <li><a href="/about">About Page</a></li>
+            <li><a href="/createBlog">New Blog</a></li>
+        </ul>
+    </nav> -->
+    <%- include('./partials/nav.ejs') %> 
+    <h2>Welcome to my Ejs Blog page</h2>
+    <form action="/" method="post">
+        <label for="">Title</label>
+        <input type="text" name="title" id="title"><br>
+        <label for="">Name</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+        <button>Submit</button>
+
+    </form>
+    
+
+
+    <%- include('./partials/footer.ejs') %> 
+
+</body>
+</html>

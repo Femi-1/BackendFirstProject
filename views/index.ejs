@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title><%=title %> | Page</title>
+</head> -->
+<%- include('./partials/head.ejs') %> 
+<body>
+    <!-- <% const name = 'eggys' %>
+    <nav>
+       <h1><%= name %></h1>
+        <ul>
+            <li> <a href="/">Home Page</a></li>
+            <li><a href="/about">About Page</a></li>
+            <li><a href="/createBlog">New Blog</a></li>
+        </ul> -->
+
+        <%- include('./partials/nav.ejs') %> 
+    </nav>
+    <h2>Welcome to my ejs Home Page</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde, quo nisi ipsum tempora quae eveniet! Debitis rem a magni reprehenderit esse nisi ducimus eaque, similique odio, alias eveniet doloribus mollitia voluptatibus beatae, ut ab. Consequatur itaque voluptatibus ullam hic illum quas voluptates culpa cupiditate beatae? Minima adipisci nam enim corrupti nihil soluta molestiae nulla ea numquam eos iusto quas deserunt quaerat consequuntur labore, minus quam excepturi consequatur earum inventore commodi pariatur et dolorem? Eaque, autem. Voluptates qui sapiente ratione iusto.</p>
+    <p>
+        <!-- <% if(Blogs.length){ %> 
+            <% Blogs.map((blog)=>{%>
+            <h2><%= blog.title %> </h2>
+            <h1><%= blog.body %> </h1>
+            
+           <%  })  %>  
+
+        <% }  else  {%>
+            <h2>No blogs today</h2>
+      <%   } %>  -->
+
+      <!-- For MongoDB Blogs -->
+
+
+      <% if(Blogs.length){ %> 
+        <% Blogs.map((blog)=>{%>
+
+    <a href="/index/<%- blog._id %> ">
+        <h2><%= blog.title %> </h2>
+        <h1><%= blog.name %> </h1>
+
+    </a>
+        
+       <%  })  %>  
+
+    <% }  else  {%>
+        <h2>No blogs today</h2>
+  <%   } %> 
+
+
+    </p>
+    <%- include('./partials/footer.ejs') %> 
+</body>
+</html>
